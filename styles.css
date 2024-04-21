@@ -1,0 +1,316 @@
+html{
+  font-family: Helvetica;
+}
+
+body {
+  background: linear-gradient(to right, #ff2079, #440bd4);
+  color: white;
+  height: 100vh;
+}
+.nav{
+  color: whitesmoke;
+  font-size: 20px;
+  display: flex;
+  gap: 70px;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding-right: 25px;
+}
+
+.nav a {
+  color: whitesmoke; 
+  text-decoration: none; 
+}
+
+.nav a:hover {
+  color: #0056b3; 
+  text-decoration: underline; 
+}
+
+nav{
+  background-color: black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.greeting{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: whitesmoke;
+  border-radius: 30px;
+  font-weight: bold;
+  color: #1b1b27;
+}
+
+.introduction{
+  margin: 55px;
+  color: whitesmoke;
+  font-size: large;
+}
+
+.container1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 50px 50px;
+}
+
+.big-img{
+  text-align: center;
+}
+
+.big-img img{
+  width: 600px;
+  height: auto;
+
+}
+
+.icons h1{
+  color: whitesmoke;
+}
+
+.icons img{
+  width: 50px;
+  height: auto;
+}
+
+.icons p{
+  color: whitesmoke;
+  font-size: large;
+  font-weight: bold;
+  background-color: rgb(5, 24, 2);
+  padding: 10px 0px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.text h2{
+  color: whitesmoke;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.contact{
+  margin-top: 500px;
+}
+.contact img{
+  width:20px;
+  height: 20px;
+  margin-right: 10px;
+  padding-top: 15px;
+}
+
+.contact div{
+  display: flex;
+  margin: 0px 50px;
+}
+
+.contact p{
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.contact a{
+    text-decoration: underline;
+    text-decoration-color: whitesmoke;
+}
+
+.signature{
+  color: whitesmoke;
+  text-align: center;
+  background-color: black;
+  padding: 5px 0px;
+}
+
+@media (min-width: 768px) {
+  .container1 {
+      grid-template-columns: repeat(2, 1fr); /* maintain two columns for tablets */
+  }
+
+  .big-img img {
+      width: 100%; /* full width of the container, but maintain aspect ratio */
+      max-width: 300px; /* limit the size even if the container is wider */
+  }
+
+  .nav {
+      gap: 35px; /* reduce the gap for smaller desktops/tablets */
+  }
+
+  .icons img {
+      width: 50px; /* slightly larger icons for tablet */
+  }
+}
+
+/* Desktops */
+@media (min-width: 1024px) {
+  .container1 {
+      grid-template-columns: repeat(2, 1fr); /* maintain two columns, adjust if necessary */
+  }
+
+  .big-img img {
+      width: 100%; /* full width of the container */
+      max-width: 600px; /* optimal viewing size */
+  }
+
+  .nav {
+       /* spread out the nav items more */
+      padding-right: 50px; /* more padding on the right */
+  }
+
+
+  .icons img {
+      width: 70px; /* larger icons for desktop */
+  }
+}
+
+@media (max-width: 768px) {
+  .container1 {
+      grid-template-columns: 1fr; /* Stack everything in one column on small screens */
+      grid-template-rows: auto auto; /* Automatically adjust the row sizes */
+     
+  }
+
+  .big-img {
+      grid-row: 1;
+/* Place the big image in the first row */
+  }
+
+  .left-block {
+      grid-row: 2; /* Place the left block content in the second row */
+  }
+
+
+}
+
+.container1 img,
+.container1 .child-element {
+    height: auto; /* Maintain aspect ratio for images */
+    max-width: 100%; /* Limit width to their natural size to prevent stretching */
+}
+
+.container1 .big-img img {
+    width: 600px; /* or whatever fixed size you prefer for large screens */
+}
+
+.container1 .icons img {
+    width: 50px; /* Set a fixed size for icons on larger screens */
+}
+@media (max-width: 1024px) {
+  .container1 .big-img img {
+      width: 100%; /* Full width of the container, respecting max-width */
+      max-width: 600px; /* Ensures it doesn't get larger than 600px */
+  }
+
+  .container1 .icons img {
+      width: 20%; /* More appropriate size on smaller screens, or use px if more suitable */
+  }
+}
+@media (max-width: 768px) {
+  .container1 .big-img img {
+      max-width: 100%; /* Allows the image to scale down with the screen size */
+  }
+
+  .container1 .icons img {
+      width: 50px; /* Keep icons small on very small screens */
+  }
+}
+
+
+.greeting {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    transform: translateY(60px);
+    animation: fadeInMoveUp 0.8s ease-out forwards;
+}
+@keyframes fadeInMoveUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.introduction {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+.container1 {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+.text h2 {
+    overflow: hidden; /* Keeps animated words from affecting layout */
+}
+.text span {
+    display: inline-block;
+    animation: bobbing 2s ease-in-out infinite;
+    margin-right: 5px; /* Optional: Adds spacing between words */
+}
+
+.text span:nth-child(1) { animation-delay: 0s; }
+.text span:nth-child(2) { animation-delay: 0.2s; }
+.text span:nth-child(3) { animation-delay: 0.4s; }
+.text span:nth-child(4) { animation-delay: 0.6s; }
+.text span:nth-child(5) { animation-delay: 0.8s; }
+.text span:nth-child(6) { animation-delay: 1s; }
+
+@keyframes bobbing {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+
+.nav-toggle {
+  display: none; /* Hide button by default */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 30px;
+  height: 3px;
+  background: whitesmoke;
+  display: block;
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: whitesmoke;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.hamburger::before { top: -10px; }
+.hamburger::after { top: 10px; }
+
+@media (max-width: 768px) {
+  .nav {
+      display: none; /* Hide navigation on small screens */
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .nav-toggle {
+      display: block; /* Show toggle button on small screens */
+  }
+}
+.nav-visible {
+  display: flex;
+ 
+}
