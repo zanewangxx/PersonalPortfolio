@@ -34,7 +34,7 @@ const About = () => {
             <article className="about__card">
               <FaRegFolderClosed className="about__icon" />
               <h5>Project</h5>
-              <small>5+ from Subjects</small>
+              <small>5+</small>
             </article>
           </div>
 
