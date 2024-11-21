@@ -10,9 +10,9 @@ const Footer = () => {
       <a href="#"  className="footer__logo">ZANE</a>
 
       <div className="footer__socials">
-      <a href="https://www.linkedin.com/in/zhen-wang-434347212/" target='_blank'><FaLinkedin /></a>
+      <a href="https://www.linkedin.com/in/zane-wang-434347212/" target='_blank'><FaLinkedin /></a>
       <a href="https://github.com/zanewangxx" target='_blank'><IoLogoGithub /></a>
-      <a href="mailto:zhenwangxa@gmail.com" target="_blank"><ImGoogle3 /></a>
+      <a href="mailto:zane.waynexx@gmail.com" target="_blank"><ImGoogle3 /></a>
       </div>
     </footer>
   )

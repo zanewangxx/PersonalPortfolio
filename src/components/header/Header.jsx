@@ -10,7 +10,7 @@ const Header = React.forwardRef((props, ref) => {
       <div className="container header__container">
         <h5>Hi I'm</h5>
         <h1>Zane</h1>
-        <div className="text-light">Web Development Learner</div>
+        <div className="text-light">Web Developer / Software Developer</div>
         <CTA />
         <Socials />
 

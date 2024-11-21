@@ -38,16 +38,17 @@ const About = () => {
             </article>
           </div>
 
-          <p>I am a recent graduate with a Master's degree in Information Technology, 
-            actively seeking entry-level positions, 
-            graduate programs, or internships. 
-            My passion lies in web development, 
-            particularly front-end development, 
-            where I can blend creativity and technical skills. 
-            I take great satisfaction in creating user-friendly 
-            and visually appealing websites that enhance user experience. 
-            Solving complex problems and achieving success 
-            in my projects brings me a deep sense of fulfillment.
+          <p>A recent graduate with a Master’s degree in Information Technology, 
+            specializing in software and web development with a strong foundation 
+            in UI/UX design. Combines technical expertise with a business background 
+            to deliver user-centered digital solutions. 
+            Experienced in programming languages such as 
+            JavaScript, Python, and C#, as well as frameworks like React, Next.js, 
+            and TailwindCSS. Also knowledged in cloud 
+            computing, database management, and iOS/.NET application development. 
+            Actively seeking entry-level positions, graduate programs, 
+            or internships to contribute to innovative projects and 
+            further develop expertise in web/software development.
           </p>
 
         </div>
